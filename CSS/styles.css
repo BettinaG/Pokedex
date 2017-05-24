@@ -5,15 +5,20 @@ body, html{
 
 body{
 	font-family:Arial, Helvetica, san-serif;
+	background-image: url('../Graphics/Background.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 	
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 .wrapper{
 	position: relative;
-	background-image: url('../Graphics/Pokedex_Background.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
 	height:85%;
 	width: 100%;
 	margin-top: 5%;
@@ -24,97 +29,100 @@ body{
 }
 
 #homeBtn{
-position: absolute;
-cursor: pointer;
-text-decoration: none;
-background: none;
-border: none;
-font-size: 100%;
-font-weight: bold;
-margin-top: 2%;
+	opacity: 0;
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	margin-top: 5%;
+	margin-left: 23%;
 }
 
 a.menuBtn{
-position: absolute;
-cursor: pointer;
-color: black;
-text-decoration: none;
-text-align:center;
-border: solid;
-border-color: black;
-border-width: thin;
-width: 8%;
+	opacity: 0;
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	margin-left: 28%;
 }
 
 #pokemonBtn{
-background-color: maroon;
-margin-top: 5%;
-margin-left: 20%;
+	margin-top: 4%;
+	width: 6%;
+}
+
+#statisticsBtn{
+	margin-top: 6%;
+	width: 6%;
 }
 
 #mapBtn{
-background-color: lime;
-margin-top: 8%;
-margin-left: 33%;
+	margin-top: 7%;
+	width: 4%
 }
 
 .whiteTextfield{
 	position: absolut;
 	background: none;
-	overflow: auto;
-	height: 50%;
-	width: 20%;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 3vh;
-	line-height: 150%;
-	border: none;
+	height: 41%;
+	width: 22%;
 	margin-top: 11%;
-	margin-left: 27%;
+	margin-left: 25%;
 	float: left;
 }
 
+#homeWhiteText{
+	overflow: auto;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 3vh;
+	line-height: 150%;
+}
+
+#mapWhiteText{
+	margin-top: 140px;
+	margin-left: 328px;
+}
+
+.pokemonImg{
+	height: 85%;
+	margin-left: 10%;
+}
+
+.pokemonWhiteText{
+	margin-left: 10%;
+	font-family: monospace;
+	font-variant: small-caps;
+	font-weight: 700;
+}
+
+#pokemonID{
+	position: abolute;
+	font-size: 4vh;
+}
+
+#pokemonName{
+	position: absolute;
+	font-size: 6vh;
+	margin-top: -3%;
+	margin-left: 7%;
+}
+
 .greenTextfield{
-position: relative;
-overflow: auto;
-background: none;
-height: 59%;
-width: 18%;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size:  2.5vh;
-line-height: 120%;
-border: none;
-margin-top: 11%;
-margin-right: 27%;
-float: right;
+	position: relative;
+	overflow: scroll;
+	background: none;
+	height: 49%;
+	width: 21%;
+	font-family: monospace;
+	font-weight: bold;
+	font-size:  2.5vh;
+	line-height: 120%;
+	border: none;
+	margin-top: 11%;
+	margin-right: 24%;
+	float: right;
 }
 
-
-p{
-margin-top: 1%;
-font-size: 30px;
-}
-
-
-
-
-#pokemonInfo{
-font-size: 4vh;
-}
-
-.mapBackground{
-position: absolute;
-background-color: lightskyblue;
-height: 94%;
-width: 98%;
-}
-
-.map{
-position: relative;
-background: url('../Graphics/sample_map.jpg')center center fixed;
-background-size: 70%;
-background-repeat: no-repeat;
-height: 90%;
-width: 90%;
-margin-top: 2%;
-margin-left: 5%;
+#map{
+	height: 242px;
+	width: 322px;
 }
