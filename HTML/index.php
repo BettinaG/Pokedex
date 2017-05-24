@@ -8,24 +8,26 @@
 </head>
 
 <body>
-	<a href="index.php" class="homeBtn">Home</a>
-	<a href="pokemon.php" class="menuBtn" id="pokemonBtn">Pokémon</a>
-	<a href="map.php" class="menuBtn" id="mapBtn">Karte</a>
-	
-	<div class="whiteTextfield">
-	Hallo!<br> 
-	Herzlich Willkommen in der Welt der Pokémon!<br>
-	Hier erfährst du alles über die Pokemon in Kanto und 
-	wo genau sie zufinden sind.<br><br>
-	Viel Spaß!
-	</div>	
-	
-	<div class="greenTextfield">
-	Links siehst du 4 Knöpfe zur Navigation:<br><br>
-	Blau: Damit gelangst du jederzeit zu dieser Startseite zurück<br><br>
-	Rot:  Hier siehst du eine Liste aller 151 Pokemon und findest viele Informationen zu allen von ihnen!<br><br>
-	Gelb: Hier gibt es einige Interessante Statistiken zu entdecken.<br><br>
-	Grün: Hier findest du eine Karte der gesamten Kantoregion mit Informationen zu allen Routen und Orten!
+	<div class="wrapper">
+		<div class="homeBtn"><a href="index.php" id="homeBtn">Home</a></div>
+		<a href="pokemon.php" class="menuBtn" id="pokemonBtn">Pokï¿½mon</a>
+		<a href="map.php" class="menuBtn" id="mapBtn">Karte</a>
+		
+		<div class="whiteTextfield">
+		Hallo!<br> 
+		Herzlich Willkommen in der Welt der PokÃ©mon!<br>
+		Hier erfÃ¤hrst du alles Ã¼ber die Pokemon in Kanto und 
+		wo genau sie zufinden sind.<br><br>
+		Viel SpaÃŸ!
+		</div>	
+		
+		<div class="greenTextfield">
+		Links siehst du 4 KnÃ¶pfe zur Navigation:<br><br>
+		Blau: Damit gelangst du jederzeit zu dieser Startseite zurï¿½ck<br><br>
+		Rot:  Hier siehst du eine Liste aller 151 Pokemon und findest viele Informationen zu allen von ihnen!<br><br>
+		Gelb: Hier gibt es einige Interessante Statistiken zu entdecken.<br><br>
+		Grï¿½n: Hier findest du eine Karte der gesamten Kantoregion mit Informationen zu allen Routen und Orten!
+		</div>
 	</div>
 </body>
 

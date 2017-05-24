@@ -1,47 +1,29 @@
 body, html{
-	height: 97%;
+	height: 100%;
+	overflow-y: hidden;
 }
 
 body{
 	font-family:Arial, Helvetica, san-serif;
-	background: url('../Graphics/Pokedex_Background.png') center center fixed;
-	background-size: 80% 80%;
-    background-repeat: no-repeat;
-    border:5px double red;
+	
 }
 
-p{
-margin-top: 1%;
-font-size: 30px;
+.wrapper{
+	position: relative;
+	background-image: url('../Graphics/Pokedex_Background.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:85%;
+	width: 100%;
+	margin-top: 5%;
 }
 
-.whiteTextfield{
-background: none;
-height: 50%;
-width: 25%;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size: 3vh;
-line-height: 150%;
-border: none;
-padding-top: 15%;
-padding-left: 15%;
-float: left;
+.homeBtn{
+	margin-left: 26%;
 }
 
-.greenTextfield{
-background: none;
-height: 50%;
-width: 25%;
-font-family: "Trebuchet MS", Helvetica, sans-serif;
-font-size:  2.5vh;
-line-height: 120%;
-border: none;
-padding-top: 15%;
-padding-right: 15%;
-float: right;
-}
-
-a.homeBtn{
+#homeBtn{
 position: absolute;
 cursor: pointer;
 text-decoration: none;
@@ -49,8 +31,7 @@ background: none;
 border: none;
 font-size: 100%;
 font-weight: bold;
-margin-left: 13%;
-margin-top: 6%;
+margin-top: 2%;
 }
 
 a.menuBtn{
@@ -76,6 +57,45 @@ background-color: lime;
 margin-top: 8%;
 margin-left: 33%;
 }
+
+.whiteTextfield{
+	position: absolut;
+	background: none;
+	overflow: auto;
+	height: 50%;
+	width: 20%;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 3vh;
+	line-height: 150%;
+	border: none;
+	margin-top: 11%;
+	margin-left: 27%;
+	float: left;
+}
+
+.greenTextfield{
+position: relative;
+overflow: auto;
+background: none;
+height: 59%;
+width: 18%;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+font-size:  2.5vh;
+line-height: 120%;
+border: none;
+margin-top: 11%;
+margin-right: 27%;
+float: right;
+}
+
+
+p{
+margin-top: 1%;
+font-size: 30px;
+}
+
+
+
 
 #pokemonInfo{
 font-size: 4vh;
