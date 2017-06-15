@@ -61,9 +61,9 @@ a.menuBtn{
 }
 
 .whiteTextfield{
-	position: absolut;
+	position: absolute;
 	background: none;
-	height: 41%;
+	height: 43%;
 	width: 22%;
 	margin-top: 11%;
 	margin-left: 25%;
@@ -71,6 +71,11 @@ a.menuBtn{
 }
 
 #homeWhiteText{
+	background-image: url('../Graphics/ball.png');
+	background-size: 90% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-opacity: 0.5;
 	overflow: auto;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 3vh;
@@ -78,8 +83,10 @@ a.menuBtn{
 }
 
 #mapWhiteText{
-	margin-top: 140px;
+	margin-top: 148px;
 	margin-left: 328px;
+	height: 251px;
+	width: 321px;
 }
 
 .pokemonImg{
@@ -100,7 +107,7 @@ a.menuBtn{
 }
 
 #pokemonName{
-	position: absolute;
+	position: fixed;
 	font-size: 6vh;
 	margin-top: -3%;
 	margin-left: 7%;
@@ -117,12 +124,7 @@ a.menuBtn{
 	font-size:  2.5vh;
 	line-height: 120%;
 	border: none;
-	margin-top: 11%;
+	margin-top: 12%;
 	margin-right: 24%;
 	float: right;
-}
-
-#map{
-	height: 242px;
-	width: 322px;
 }

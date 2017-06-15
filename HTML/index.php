@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Pokedex - Kanto</title>
-<link rel= stylesheet href ="../CSS/styles.css">
+<link rel=stylesheet href ="../CSS/stylesAll.css">
 </head>
 
 <body>
