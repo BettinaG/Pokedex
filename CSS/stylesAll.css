@@ -1,43 +1,45 @@
-body, html{
+body, html
+{
 	height: 100%;
 	overflow-y: hidden;
 }
 
-body{
+body
+{
 	font-family:Arial, Helvetica, san-serif;
 	background-image: url('../Graphics/Background.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-position: center;
-	
+	background-position: center;	
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar 
+{
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
-.wrapper{
+.wrapper
+{
 	position: relative;
 	height:85%;
 	width: 100%;
 	margin-top: 5%;
 }
 
-.homeBtn{
-	margin-left: 26%;
-}
-
-#homeBtn{
+#homeBtn
+{
 	opacity: 0;
 	display: block;
 	position: absolute;
 	cursor: pointer;
 	margin-top: 5%;
 	margin-left: 23%;
+	line-height: 200%;
 }
 
-a.menuBtn{
+a.menuBtn
+{
 	opacity: 0;
 	display: block;
 	position: absolute;
@@ -45,22 +47,26 @@ a.menuBtn{
 	margin-left: 28%;
 }
 
-#pokemonBtn{
+#pokemonBtn
+{
 	margin-top: 4%;
 	width: 6%;
 }
 
-#statisticsBtn{
+#statisticsBtn
+{
 	margin-top: 6%;
 	width: 6%;
 }
 
-#mapBtn{
+#mapBtn
+{
 	margin-top: 7%;
 	width: 4%
 }
 
-.whiteTextfield{
+.whiteTextfield
+{
 	position: absolute;
 	background: none;
 	height: 43%;
@@ -68,9 +74,11 @@ a.menuBtn{
 	margin-top: 11%;
 	margin-left: 25%;
 	float: left;
+	overflow-y: auto; 
 }
 
-#homeWhiteText{
+#homeWhiteText
+{
 	background-image: url('../Graphics/ball.png');
 	background-size: 90% 100%;
 	background-repeat: no-repeat;
@@ -82,38 +90,44 @@ a.menuBtn{
 	line-height: 150%;
 }
 
-#mapWhiteText{
+#mapWhiteText
+{
 	margin-top: 148px;
 	margin-left: 328px;
 	height: 251px;
 	width: 321px;
 }
 
-.pokemonImg{
+.pokemonImg
+{
 	height: 85%;
 	margin-left: 10%;
 }
 
-.pokemonWhiteText{
+.pokemonWhiteText
+{
 	margin-left: 10%;
 	font-family: monospace;
 	font-variant: small-caps;
 	font-weight: 700;
 }
 
-#pokemonID{
+#pokemonID
+{
 	position: abolute;
 	font-size: 4vh;
 }
 
-#pokemonName{
+#pokemonName
+{
 	position: fixed;
 	font-size: 6vh;
 	margin-top: -3%;
 	margin-left: 7%;
 }
 
-.greenTextfield{
+.greenTextfield
+{
 	position: relative;
 	overflow: scroll;
 	background: none;
@@ -122,9 +136,72 @@ a.menuBtn{
 	font-family: monospace;
 	font-weight: bold;
 	font-size:  2.5vh;
-	line-height: 120%;
+	line-height: 155%;
 	border: none;
 	margin-top: 12%;
 	margin-right: 24%;
 	float: right;
+}
+
+#pokemonListGreen
+{
+	line-height: 220%;
+}
+
+.pokemonInfo
+{
+	line-height: 350%;
+}
+
+#eintrag
+{
+	line-height: 180%;
+}
+
+#ort
+{
+	line-height: 180%;
+}
+
+#placeName
+{
+	font-size: 20pt;
+	line-height: 80%;
+}
+
+#tabHead
+{
+	
+	border-width: thin;
+	margin-top: -3px;
+	margin-left: -13px;
+	line-height: 120%;
+	width: 320px;
+	position: fixed;
+	background-color: white;
+	opacity: 1;
+}
+
+#tabBody
+{
+	margin-top: 10px;
+	width: 321px;
+}
+
+table#pokeList
+{
+	width: 100%;
+}
+
+table#pokeList tr:nth-child(even) {
+    background-color: #eee;
+}
+table#pokeList tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.listImg
+{
+	height: 50px;
+	width: 50px;
 }

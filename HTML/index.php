@@ -10,7 +10,7 @@
 <body>
 	<div class="wrapper">
 		<a href="index.php" id="homeBtn">Home</a>
-		<a href="pokemon.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
+		<a href="pokemonList.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
 		<a class="menuBtn" id="statisticsBtn">Stats</a>
 		<a href="map.php" class="menuBtn" id="mapBtn">Map</a>
 		

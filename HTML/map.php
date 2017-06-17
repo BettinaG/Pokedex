@@ -12,23 +12,24 @@
 <body>
 	<div class="wrapper">
 		<a href="index.php" id="homeBtn">Home</a>
-		<a href="pokemon.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
+		<a href="pokemonList.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
 		<a class="menuBtn" id="statisticsBtn">Stats</a>
 		<a href="map.php" class="menuBtn" id="mapBtn">Map</a>
 		
 		<div class="whiteTextfield" id="mapWhiteText"></div>	
 		
 		<div class="greenTextfield">
-		Links siehst du 4 Knöpfe zur Navigation:<br><br>
-		Blau: Damit gelangst du jederzeit zu dieser Startseite zurück<br><br>
-		Rot:  Hier siehst du eine Liste aller 151 Pokemon und findest viele Informationen zu allen von ihnen!<br><br>
-		Gelb: Hier gibt es einige Interessante Statistiken zu entdecken.<br><br>
-		Grün: Hier findest du eine Karte der gesamten Kantoregion mit Informationen zu allen Routen und Orten!
+			<p id="placeName"></p>
+			<div id="mapInfo">
+				Hier siehst du eine Karte der Kanto-Region<br>
+				Klicke auf einen Ort, um zu erfahren, welche Pokemon dort leben!<br>
+			</div>		
 		</div>
 	</div>
 	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
    integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
    crossorigin=""></script>
+   <script type="text/javascript" src="../Javascript/jquery.js"></script>
    <script type="text/javascript" src="../Javascript/map.js"></script>
 </body>
 </html>

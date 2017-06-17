@@ -36,15 +36,15 @@ orte[2]  = ["Mamoria City", 625, 810, 115, 110];
 orte[3]  = ["Azuria City", 1135, 750, 80, 100];
 orte[4]  = ["Orania City", 1130, 390, 100, 90];
 orte[5]  = ["Lavandia City", 1360, 550, 60, 44];
-orte[6]  = ["Lavandia City", 1405, 550, 45, 15];
+orte[6]  = ["Lavandia City", 1405, 550, 45, 25];
 orte[7]  = ["Prismania City", 940, 515, 105, 115];
 orte[8]  = ["Fuchsania City", 930, 150, 104, 120];
 orte[9]  = ["Saffronia City", 1110, 550, 125, 125];
 orte[10] = ["Zinnoberinsel", 610, 75, 45, 95];
 orte[11] = ["Indigo Plateau", 375, 670, 40, 45];
 orte[12] = ["Geheimdungeon", 1130, 831, 15, 20];
-orte[13] = ["Digdas Höhle", 670, 780, 20, 20];
-orte[14] = ["Digdas Höhle", 1250, 465, 15, 25];
+orte[13] = ["Digdas Hoehle", 670, 780, 20, 20];
+orte[14] = ["Digdas Hoehle", 1250, 465, 15, 25];
 orte[15] = ["Felstunnel", 1370, 730, 15, 20];
 orte[16] = ["Felstunnel", 1370, 635, 35, 60];
 orte[17] = ["Kraftwerk", 1380, 690, 20, 30];
@@ -55,7 +55,7 @@ orte[21] = ["Pokémon-Turm", 1405, 596, 25, 25];
 orte[22] = ["Safari-Zone", 950, 255, 60, 95];
 orte[23] = ["Seeschauminseln", 765, 55, 50, 80];
 orte[24] = ["Siegesstraße", 360, 635, 34, 80];
-orte[25] = ["Vertania Wald", 620, 680, 99, 85];
+orte[25] = ["Vertania-Wald", 620, 680, 99, 85];
 orte[26] = ["Route 1", 620, 371, 128, 70];
 orte[27] = ["Route 2", 610, 611, 68, 90];
 orte[28] = ["Route 3", 736, 795, 70, 134];
@@ -104,6 +104,38 @@ function resetHighlight(e) {
 	})
 }
 
+function setInfo(e){
+	var div=document.getElementById("mapInfo");
+	var p = document.getElementById("placeName");
+	
+	var ort = e.target.getPopup().getContent();
+	
+	p.innerHTML="&#160;"+ort;
+	$.post("../HTML/database-request.php",{place: ort, abfrage: "ort"},function(data){
+//			alert(data);
+			var pObject;
+			var text = "";
+			div.innerHTML=text;
+			if(data!=null)
+			{
+				pObject=JSON.parse(data);
+			}
+			for(i=0;i<pObject.length;i++)
+			{
+				var id = pObject[i].PKMN_ID.toString();
+				var idLength = id.length;
+				if(idLength==1)     id = "#00"+id;
+				else if(idLength==2)id = "#0"+id;
+				else if(idLength==3)id = "#"+id;
+				
+				if(i==0) text += "&#160;&#160;"+id+"&#160;&#160;&#160;"+pObject[i].PKMN_NAME;
+				else     text +="<br>&#160;&#160;"+id+"&#160;&#160;&#160;"+pObject[i].PKMN_NAME;
+			}
+			
+			div.innerHTML=text;
+	});
+}
+
 for(i=0;i<orte.length;i++){
 	polygons[i] = L.polygon([
 	                    xy(orte[i][1],			 orte[i][2]),
@@ -115,7 +147,14 @@ for(i=0;i<orte.length;i++){
 							}).addTo(map);	
 	polygons[i].bindPopup(orte[i][0]).addTo(map);
 	polygons[i].on({
+		click: setInfo,
         mouseover: highlightFeature,
         mouseout: resetHighlight
         });
 }
+
+
+
+$.post("../HTML/database-request.php",{},function(data){
+//	alert(data);
+});
