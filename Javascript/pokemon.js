@@ -28,8 +28,8 @@ function loadTable()
 				else if(idLength==3)ids[i] = "<td>#"+ids[i]+"</td>";
 				
 				names2[i] = pObject[i].PKMN_NAME;
-				
-				names[i] = "<td><a href=../HTML/pokemon.php>&#160;&#160;&#160;&#160;&#160;&#160;"+pObject[i].PKMN_NAME+"</a></td>";
+								
+				names[i] = "<td><a onClick=getName(this) href=../HTML/pokemon.php>"+pObject[i].PKMN_NAME+"</a></td>";
 			
 			text += "<tr>"+icons[i]+ids[i]+names[i]+"</tr>";
 			}
@@ -37,11 +37,39 @@ function loadTable()
 	});
 }
 
+function getName(obj)
+{
+	var aktName = $(obj).text();
+//    alert(aktName);
+    
+    var namePass = {
+    	     Name: aktName
+    	   };
+    	   //converts to JSON string the Object
+    	   namePass = JSON.stringify(namePass);
+    	   //creates a base-64 encoded ASCII string
+    	   namePass = btoa(namePass);
+    	   //save the encoded accout to web storage
+    	   localStorage.setItem('_namePass', namePass);
+}
+
+function loadName() {
+	   var namePass = localStorage.getItem('_namePass');
+	   if (!namePass) return "undefined";
+	   localStorage.removeItem('_namePass');
+	   //decodes a string data encoded using base-64
+	   namePass = atob(namePass);
+	   //parses to Object the JSON string
+	   namePass = JSON.parse(namePass);
+	   //do what you need with the Object
+	   aktName = namePass.Name;
+	   return aktName;
+	}
 
 function setPokemonInfo(name)
 {
-	poke = 'Bisasam';
-//	alert(poke);
+//	alert(loadData());
+	var poke = name;
 	
 	var pokemonIdDiv   = document.getElementById("pokemonID");
 	var pokemonNameDiv = document.getElementById("pokemonName");
