@@ -74,7 +74,7 @@ a.menuBtn
 	margin-top: 11%;
 	margin-left: 25%;
 	float: left;
-	overflow-y: auto; 
+	overflow-y: auto;
 }
 
 #homeWhiteText
@@ -104,7 +104,7 @@ a.menuBtn
 	margin-left: 10%;
 }
 
-.pokemonWhiteText
+.pokemonWhiteText 
 {
 	margin-left: 10%;
 	font-family: monospace;
@@ -186,6 +186,12 @@ a.menuBtn
 {
 	margin-top: 10px;
 	width: 321px;
+}
+
+a:visited
+{
+	color:black;
+	
 }
 
 table#pokeList

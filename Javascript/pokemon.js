@@ -26,10 +26,8 @@ function loadTable()
 				if     (idLength==1)ids[i] = "<td>#00"+ids[i]+"</td>";
 				else if(idLength==2)ids[i] = "<td>#0"+ids[i]+"</td>";
 				else if(idLength==3)ids[i] = "<td>#"+ids[i]+"</td>";
-				
-				names2[i] = pObject[i].PKMN_NAME;
 								
-				names[i] = "<td><a onClick=getName(this) href=../HTML/pokemon.php>"+pObject[i].PKMN_NAME+"</a></td>";
+				names[i] = "<td><a onClick=getName(this) style=text-decoration:none; href=../HTML/pokemon.php>"+pObject[i].PKMN_NAME+"</a></td>";
 			
 			text += "<tr>"+icons[i]+ids[i]+names[i]+"</tr>";
 			}
