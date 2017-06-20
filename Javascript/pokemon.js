@@ -101,7 +101,7 @@ function setPokemonInfo(name)
 		var pkmn_id, pkmn_name, eintrag, basis, ent1, ent2;
 		var typ = "Typ: &#160;&#160;&#160;&#160;";
 		var ort = "Fundort: ";
-//		alert(data);
+		alert(data);
 		if(data!=null)
 		{
 			pObject=JSON.parse(data);
@@ -116,6 +116,10 @@ function setPokemonInfo(name)
 		pkmn_name = pObject[0].PKMN_NAME;
 		eintrag = pObject[0].DEX_EINTRAG+"<br>";
 		pokemonImg = "../Graphics/Bilder/"+pObject[0].BILD_DATEINAME;
+		
+		basis = "Basis: " + pObject[0].BASIS;
+		ent1  = "1.Entwicklung: " + pObject[0].ENTW_EINS;
+		ent2  = "2.ENtwicklung: " + pObject[0].ENTW_ZWEI;
 
 		for(i=0;i<pObject.length;i++)
 		{
@@ -147,10 +151,10 @@ function setPokemonInfo(name)
 		eintragDiv.innerHTML     = eintrag;
 		typDiv.innerHTML	     = typ;
 		ortDiv.innerHTML 	     = ort;
-//		innerHTML.basisDiv       = 
-//		innerHTML.ent1Div        = 
-//		innerHTML.ent2Div        = 
-//	
+		basisDiv.innerHTML       = basis;
+		ent1Div.innerHTML        = ent1;
+		ent2Div.innerHTML        = ent2;
+	
 	});
 	
 }
