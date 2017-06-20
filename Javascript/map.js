@@ -128,8 +128,8 @@ function setInfo(e){
 				else if(idLength==2)id = "#0"+id;
 				else if(idLength==3)id = "#"+id;
 				
-				if(i==0) text += "&#160;&#160;"+id+"&#160;&#160;&#160;"+pObject[i].PKMN_NAME;
-				else     text +="<br>&#160;&#160;"+id+"&#160;&#160;&#160;"+pObject[i].PKMN_NAME;
+				if(i==0) text += "&#160;&#160;"+id+"&#160;&#160;&#160;<a onClick=getName(this) style=text-decoration:none; href=../HTML/pokemon.php>"+pObject[i].PKMN_NAME+"</a>";
+				else     text +="<br>&#160;&#160;"+id+"&#160;&#160;&#160;<a onClick=getName(this) style=text-decoration:none; href=../HTML/pokemon.php>"+pObject[i].PKMN_NAME+"</a>";
 			}
 			
 			div.innerHTML=text;

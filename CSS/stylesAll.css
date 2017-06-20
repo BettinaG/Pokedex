@@ -150,17 +150,13 @@ a.menuBtn
 
 .pokemonInfo
 {
-	line-height: 350%;
-}
-
-#eintrag
-{
 	line-height: 180%;
 }
 
-#ort
+#filler
 {
-	line-height: 180%;
+	visibility: hidden;
+	line-height: 100%;
 }
 
 #placeName
@@ -171,7 +167,6 @@ a.menuBtn
 
 #tabHead
 {
-	
 	border-width: thin;
 	margin-top: -3px;
 	margin-left: -13px;
@@ -190,8 +185,7 @@ a.menuBtn
 
 a:visited
 {
-	color:black;
-	
+	color:black;	
 }
 
 table#pokeList
@@ -210,4 +204,19 @@ table#pokeList tr:nth-child(odd) {
 {
 	height: 50px;
 	width: 50px;
+}
+
+#audioBtn
+{
+	position: absolute;
+	margin-top: 30%;
+	margin-left: 26%;
+	height: 15px;
+	width: 28px;
+	cursor: pointer;
+}
+
+#audio
+{
+	visibility: hidden;
 }

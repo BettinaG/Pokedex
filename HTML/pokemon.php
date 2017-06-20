@@ -19,10 +19,19 @@
 			<div class="pokemonWhiteText" id="pokemonID"></div><div class="pokemonWhiteText" id="pokemonName"></div>
 		</div>	
 	
+		<div id="audioBtn" onClick="playAudio();">
+			<audio id="audio" controls="controls">
+	  			<source id="audioSource" src=""></source>
+	  			Your browser does not support the audio format.
+			</audio>
+		</div>
+	
 		<div class="greenTextfield">
 			<div class="pokemonInfo" id="eintrag">Eintrag</div>
 			<div class="pokemonInfo" id="typ">Typ</div>
+			<div class="pokemonInfo" id="filler">aaa</div>
 			<div class="pokemonInfo" id="ort">Ort</div>
+			<div class="pokemonInfo" id="filler">aaa</div>
 			<div class="pokemonInfo" id="basis"> Basis</div>
 			<div class="pokemonInfo" id="ent1">Stufe 1</div>
 			<div class="pokemonInfo" id="ent2">Stufe 2</div>

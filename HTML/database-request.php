@@ -36,7 +36,8 @@
 	
 	if($_POST['abfrage']==="poke"){
 		$pokemonInfo="SELECT
-							POKEMON.PKMN_ID, POKEMON.PKMN_NAME, POKEMON.DEX_EINTRAG,POKEMON.BASIS, POKEMON.ENTW_EINS, POKEMON.ENTW_ZWEI,
+							POKEMON.PKMN_ID, POKEMON.PKMN_NAME, POKEMON.DEX_EINTRAG,
+							POKEMON.BASIS, POKEMON.ENTW_EINS, POKEMON.ENTW_ZWEI,
 						    ORT.ORT_NAME, 
 						    TYP.TYP_NAME, 
 						    BILD.BILD_DATEINAME, ICON.ICON_DATEINAME, SOUND.SOUND_DATEINAME
@@ -69,6 +70,29 @@
 		{echo $json_array;}
 	}
 	
+	if($_POST['abfrage']==="audio"){
+		$pokemonSound="SELECT
+							SOUND_DATEINAME
+						FROM
+							SOUND,POKEMON
+						WHERE
+							POKEMON.PKMN_NAME = '".$_POST['pokemon']."' AND
+							POKEMON.PKMN_ID = SOUND.SOUND_ID";
+	$result=$conn->query($pokemonSound);
+		$json_array=null;
+		
+		if($result->num_rows>0){
+			$results=array();
+			while($row=$result->fetch_assoc()){
+				$results[]=$row;
+			}
+			$json_array=json_encode($results);
+		}else{
+			
+		}
+		if($json_array!=null)
+		{echo $json_array;}
+	}
 	
 	if($_POST['abfrage']==="liste"){
 		$liste="SELECT

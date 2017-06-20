@@ -101,7 +101,7 @@ function setPokemonInfo(name)
 		var pkmn_id, pkmn_name, eintrag, basis, ent1, ent2;
 		var typ = "Typ: &#160;&#160;&#160;&#160;";
 		var ort = "Fundort: ";
-		alert(data);
+//		alert(data);
 		if(data!=null)
 		{
 			pObject=JSON.parse(data);
@@ -114,9 +114,9 @@ function setPokemonInfo(name)
 		else if(idLength==3)pkmn_id = "#"+pkmn_id;
 		
 		pkmn_name = pObject[0].PKMN_NAME;
-		eintrag = pObject[0].DEX_EINTRAG+"<br>";
 		pokemonImg = "../Graphics/Bilder/"+pObject[0].BILD_DATEINAME;
 		
+		eintrag = pObject[0].DEX_EINTRAG+"<br><br>";
 		basis = "Basis: " + pObject[0].BASIS;
 		ent1  = "1.Entwicklung: " + pObject[0].ENTW_EINS;
 		ent2  = "2.ENtwicklung: " + pObject[0].ENTW_ZWEI;
@@ -156,5 +156,33 @@ function setPokemonInfo(name)
 		ent2Div.innerHTML        = ent2;
 	
 	});
+	
+}
+
+function playAudio(){
+	
+	var poke = $('#pokemonName').html();
+	var soundName;
+//	var id = document.getElementById("pokemonID").html();
+//	alert(poke);
+	
+	$.post("../HTML/database-request.php",{pokemon: poke , abfrage: "audio"},function(data){
+		if(data!=null)
+		{
+			pObject=JSON.parse(data);
+		}
+//		alert(data);
+		for(i=0; i<pObject.length; i++){
+			soundName = pObject[i].SOUND_DATEINAME;
+		}
+		
+		 var source = document.getElementById('audioSource');
+		 source.src = "../Graphics/Sounds/"+soundName;
+		 
+		 var audio = document.getElementById('audio');
+		 audio.load();
+		 audio.play();
+		
+	});		
 	
 }
