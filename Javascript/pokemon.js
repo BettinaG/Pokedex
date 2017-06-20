@@ -118,8 +118,8 @@ function setPokemonInfo(name)
 		
 		eintrag = pObject[0].DEX_EINTRAG+"<br><br>";
 		basis = "Basis: " + pObject[0].BASIS;
-		ent1  = "1.Entwicklung: " + pObject[0].ENTW_EINS;
-		ent2  = "2.ENtwicklung: " + pObject[0].ENTW_ZWEI;
+		if(pObject[0].ENTW_EINS != null) ent1  = "1.Entwicklung: " + pObject[0].ENTW_EINS;
+		if(pObject[0].ENTW_ZWEI != null)ent2  = "2.Entwicklung: " + pObject[0].ENTW_ZWEI;
 
 		for(i=0;i<pObject.length;i++)
 		{
