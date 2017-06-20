@@ -92,5 +92,29 @@
 		if($json_array!=null)
 		{echo $json_array;}
 	}
+	
+	if($_POST['abfrage']==="random"){
+		$random="SELECT
+					PKMN_NAME
+				FROM
+					POKEMON
+				WHERE
+					PKMN_ID = '".$_POST['ranNum']."'";
+	$result=$conn->query($random);
+		$json_array=null;
+		
+		if($result->num_rows>0){
+			$results=array();
+			while($row=$result->fetch_assoc()){
+				$results[]=$row;
+			}
+			$json_array=json_encode($results);
+		}else{
+			
+		}
+		if($json_array!=null)
+		{echo $json_array;}
+	}
+	
 
 ?>

@@ -5,9 +5,10 @@
 <meta charset="UTF-8">
 <title>Pokedex - Kanto</title>
 <link rel= stylesheet href ="../CSS/stylesAll.css">
+
 </head>
 
-<body onload="setPokemonInfo(loadName())">
+<body onload="setRandomPoke()">
 	<div class="wrapper">
 		<a href="index.php" id="homeBtn">Home</a>
 		<a href="pokemonList.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
@@ -29,7 +30,8 @@
 		</div>
 	</div>
 	
-	<script type="text/javascript" src="../Javascript/pokemon.js"></script>
 	<script type="text/javascript" src="../Javascript/jquery.js"></script>
+	<script type="text/javascript" src="../Javascript/pokemon.js"></script>	
+	
 </body>
 </html>

@@ -10,8 +10,8 @@
 <body onload="loadTable()">
 	<div class="wrapper">
 		<a href="index.php" id="homeBtn">Home</a>
-		<a href="pokemon.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
-		<a class="menuBtn" id="statisticsBtn">Stats</a>
+		<a href="pokemonList.php" class="menuBtn" id="pokemonBtn">Pokemon</a>
+		<a href="pokemonRan.php" class="menuBtn" id="statisticsBtn">Stats</a>
 		<a href="map.php" class="menuBtn" id="mapBtn">Map</a>
 		
 		<div class="whiteTextfield">
@@ -43,7 +43,7 @@
 	
 		<div class="greenTextfield" id="pokemonListGreen">
 			Hier siehst du eine Liste aller Pokemon die es in Kanto zu finden gibt.<br>
-			Wähle eins von ihnen aus, um nähere Informationen dazu zu erhalten.
+			Wï¿½hle eins von ihnen aus, um nï¿½here Informationen dazu zu erhalten.
 		</div>
 	</div>
 	

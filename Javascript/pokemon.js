@@ -51,7 +51,7 @@ function getName(obj)
     	   localStorage.setItem('_namePass', namePass);
 }
 
-function loadName() {
+function loadName(){
 	   var namePass = localStorage.getItem('_namePass');
 	   if (!namePass) return "undefined";
 	   localStorage.removeItem('_namePass');
@@ -62,13 +62,31 @@ function loadName() {
 	   //do what you need with the Object
 	   aktName = namePass.Name;
 	   return aktName;
-	}
+}
+
+
+
+function setRandomPoke(){
+	var ranName;
+	var ran = Math.floor((Math.random() * 151) + 1);
+	var pObject;
+	$.post("../HTML/database-request.php",{ranNum: ran , abfrage: "random"},function(data){
+		if(data!=null)
+		{
+			pObject=JSON.parse(data);
+		}
+//		alert(data);
+		for(i=0; i<pObject.length; i++){
+			ranName = pObject[i].PKMN_NAME;
+		}
+		setPokemonInfo(ranName);
+	});		
+}
 
 function setPokemonInfo(name)
 {
-//	alert(loadData());
 	var poke = name;
-	
+
 	var pokemonIdDiv   = document.getElementById("pokemonID");
 	var pokemonNameDiv = document.getElementById("pokemonName");
 	var eintragDiv     = document.getElementById("eintrag");
@@ -93,6 +111,7 @@ function setPokemonInfo(name)
 		var idLength = pkmn_id.length;
 		if(idLength==1)pkmn_id = "#00"+pkmn_id;
 		else if(idLength==2)pkmn_id = "#0"+pkmn_id;
+		else if(idLength==3)pkmn_id = "#"+pkmn_id;
 		
 		pkmn_name = pObject[0].PKMN_NAME;
 		eintrag = pObject[0].DEX_EINTRAG+"<br>";
