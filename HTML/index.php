@@ -16,10 +16,10 @@
 		
 		<div class="whiteTextfield" id="homeWhiteText">
 		Hallo!<br> 
-		Herzlich Willkommen in der Welt der PokÈmon!<br>
-		Hier erf‰hrst du alles ¸ber die Pokemon in Kanto und 
+		Herzlich Willkommen in der Welt der Pok√©mon!<br>
+		Hier erf√§hrst du alles √ºber die Pokemon in Kanto und 
 		wo genau sie zufinden sind.<br><br>
-		Viel Spaﬂ!
+		Viel Spa√ü!
 		</div>	
 		
 		<div class="greenTextfield">

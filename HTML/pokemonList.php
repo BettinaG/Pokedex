@@ -43,7 +43,7 @@
 	
 		<div class="greenTextfield" id="pokemonListGreen">
 			Hier siehst du eine Liste aller Pokemon die es in Kanto zu finden gibt.<br>
-			W�hle eins von ihnen aus, um n�here Informationen dazu zu erhalten.
+			Wähle eins von ihnen aus, um nähere Informationen dazu zu erhalten.
 		</div>
 	</div>
 	

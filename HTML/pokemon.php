@@ -7,7 +7,7 @@
 <link rel= stylesheet href ="../CSS/stylesAll.css">
 </head>
 
-<body onload="setPokemonInfo(loadName())">
+<body id="pokeBody" onload="setPokemonInfo(loadName())">
 	<div class="wrapper">
 		<a href="index.php" id="homeBtn">Home</a>
 		<a href="pokemonList.php" class="menuBtn" id="pokemonBtn">Pokemon</a>

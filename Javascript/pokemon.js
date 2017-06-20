@@ -115,11 +115,13 @@ function setPokemonInfo(name)
 		
 		pkmn_name = pObject[0].PKMN_NAME;
 		pokemonImg = "../Graphics/Bilder/"+pObject[0].BILD_DATEINAME;
-		
+				
 		eintrag = pObject[0].DEX_EINTRAG+"<br><br>";
-		basis = "Basis: " + pObject[0].BASIS;
-		if(pObject[0].ENTW_EINS != null) ent1  = "1.Entwicklung: " + pObject[0].ENTW_EINS;
-		if(pObject[0].ENTW_ZWEI != null)ent2  = "2.Entwicklung: " + pObject[0].ENTW_ZWEI;
+		basis = "Basis: <a onClick=getName(this) style=text-decoration:none; href=../HTML/pokemon.php>"+ pObject[0].BASIS+"</a>";
+		if(pObject[0].ENTW_EINS != "") ent1  = "1.Entwicklung: <a onClick=getName(this) style=text-decoration:none; href=../HTML/pokemon.php>"+ pObject[0].ENTW_EINS+"</a>";
+		else ent1 = "";
+		if(pObject[0].ENTW_ZWEI != "")ent2  = "2.Entwicklung: <a onClick=getName(this) style=text-decoration:none; href=../HTML/pokemon.php>"+ pObject[0].ENTW_ZWEI+"</a>";
+		else ent2 = "";
 
 		for(i=0;i<pObject.length;i++)
 		{

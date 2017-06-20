@@ -12,6 +12,13 @@ body
 	background-repeat: no-repeat;
 	background-position: center;	
 }
+#pokeBody
+{
+	background-image: url('../Graphics/Background_POKE.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 ::-webkit-scrollbar 
 {
